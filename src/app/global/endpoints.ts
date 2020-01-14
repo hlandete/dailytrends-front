@@ -1,4 +1,2 @@
-export const apiUrl = "http://localhost:3000";
-
-export const mundoEndPoint = "/elmundo";
-export const paisEndPoint = "/elpais";
+export const mundoEndPoint = "api/elmundo";
+export const paisEndPoint = "api/elpais";

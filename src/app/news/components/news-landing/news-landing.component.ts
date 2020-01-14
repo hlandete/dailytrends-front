@@ -13,9 +13,10 @@ export class NewsLandingComponent implements OnInit {
 
   public mundoArticles;
   public paisArticles;
+  public articles;
 
   async ngOnInit() {
-    this.mundoArticles = await this.newsService.getArticles(API.mundoEndPoint);
-    this.paisArticles = await this.newsService.getArticles(API.paisEndPoint);
+    this.articles = await this.newsService.getFeed();
+    // this.paisArticles = await this.newsService.getArticles(API.paisEndPoint);
   }
 }

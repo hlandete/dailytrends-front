@@ -1,11 +1,8 @@
-<div class='newsLanding'>
-<h1>El Mundo</h1>
+<div class="newsLanding">
+  <h1>DailyTrends</h1>
 
-<app-dailytrend-article *ngFor="let article of mundoArticles" [article]="article"></app-dailytrend-article>
-
-<h1>El Pais</h1>
-
-<app-dailytrend-article *ngFor="let article of paisArticles" [article]="article"></app-dailytrend-article>
-
-
+  <app-dailytrend-article
+    *ngFor="let article of articles"
+    [article]="article"
+  ></app-dailytrend-article>
 </div>

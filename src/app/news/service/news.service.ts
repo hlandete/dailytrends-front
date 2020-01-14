@@ -9,7 +9,10 @@ import * as API from "../../global/endpoints";
 export class NewsService {
   constructor(private http: HttpClient) {}
 
-  public getArticles(endpoint) {
-    return this.http.get(API.apiUrl + endpoint).toPromise();
+  public getFeed() {
+    return this.http.get("http://localhost:3000/articles/feed").toPromise();
   }
+  /*public getArticles(endpoint) {
+    return this.http.get(endpoint).toPromise();
+  }*/
 }

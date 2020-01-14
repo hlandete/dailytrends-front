@@ -3,10 +3,10 @@ import { NewsLandingComponent } from "./components/news-landing/news-landing.com
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { DailytrendArticleComponent } from "./components/dailytrend-article/dailytrend-article.component";
-import { MatCardModule } from "@angular/material";
+import { MaterialModule } from "../global/material.module";
 @NgModule({
   declarations: [NewsLandingComponent, DailytrendArticleComponent],
   providers: [NewsService],
-  imports: [CommonModule, MatCardModule]
+  imports: [CommonModule, MaterialModule]
 })
 export class NewsModule {}
