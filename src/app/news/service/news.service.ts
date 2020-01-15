@@ -18,7 +18,11 @@ export class NewsService {
   }
 
   public getSingleNew(id) {
-    return this.http.get(API.endpoints.singleNew + "/" + id).toPromise();
+    return this.http.get(API.endpoints.getNew + "/" + id).toPromise();
+  }
+
+  public postSingleNew(url) {
+    return this.http.post(API.endpoints.postNew, { url }).toPromise();
   }
   /*public getArticles(endpoint) {
     return this.http.get(endpoint).toPromise();

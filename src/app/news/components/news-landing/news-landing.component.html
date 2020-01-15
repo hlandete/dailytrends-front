@@ -1,5 +1,19 @@
 <div class="newsLanding">
   <h1>DailyTrends</h1>
+
+  <form [formGroup]="articleForm">
+    <input matInput placeholder="Name" formControlName="url" />
+
+    <button
+      type="submit"
+      [disabled]="articleForm.invalid"
+      (click)="addArticle()"
+      mat-button
+    >
+      Añadir Noticia
+    </button>
+  </form>
+
   <mat-grid-list cols="4" rowHeight="150px">
     <app-dailytrend-article
       *ngFor="let article of articles"

@@ -16,6 +16,7 @@ export class NewDetailComponent implements OnInit {
 
   public id: string;
   public article: Article;
+  public editMode: boolean = false;
 
   ngOnInit() {
     this.route.params.subscribe(params => {

@@ -4,10 +4,15 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { DailytrendArticleComponent } from "./components/dailytrend-article/dailytrend-article.component";
 import { MaterialModule } from "../global/material.module";
-import { NewDetailComponent } from './components/new-detail/new-detail.component';
+import { NewDetailComponent } from "./components/new-detail/new-detail.component";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 @NgModule({
-  declarations: [NewsLandingComponent, DailytrendArticleComponent, NewDetailComponent],
+  declarations: [
+    NewsLandingComponent,
+    DailytrendArticleComponent,
+    NewDetailComponent
+  ],
   providers: [NewsService],
-  imports: [CommonModule, MaterialModule]
+  imports: [CommonModule, MaterialModule, FormsModule, ReactiveFormsModule]
 })
 export class NewsModule {}
