@@ -1,7 +1,10 @@
 export interface Article {
   title: string;
   body: string;
-  source: string;
+  source: {
+    url: string;
+    name: string;
+  };
   image: string;
   publisher: string;
 }

@@ -4,8 +4,9 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { DailytrendArticleComponent } from "./components/dailytrend-article/dailytrend-article.component";
 import { MaterialModule } from "../global/material.module";
+import { NewDetailComponent } from './components/new-detail/new-detail.component';
 @NgModule({
-  declarations: [NewsLandingComponent, DailytrendArticleComponent],
+  declarations: [NewsLandingComponent, DailytrendArticleComponent, NewDetailComponent],
   providers: [NewsService],
   imports: [CommonModule, MaterialModule]
 })

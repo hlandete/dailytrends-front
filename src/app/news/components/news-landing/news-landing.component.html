@@ -1,8 +1,9 @@
 <div class="newsLanding">
   <h1>DailyTrends</h1>
-
-  <app-dailytrend-article
-    *ngFor="let article of articles"
-    [article]="article"
-  ></app-dailytrend-article>
+  <mat-grid-list cols="4" rowHeight="150px">
+    <app-dailytrend-article
+      *ngFor="let article of articles"
+      [article]="article"
+    ></app-dailytrend-article>
+  </mat-grid-list>
 </div>

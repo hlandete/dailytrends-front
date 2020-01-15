@@ -1,8 +1,6 @@
 import { NewsService } from "./../../service/news.service";
 import { Component, OnInit } from "@angular/core";
 
-import * as API from "../../../global/endpoints";
-
 @Component({
   selector: "app-news-landing",
   templateUrl: "./news-landing.component.html",
@@ -16,7 +14,11 @@ export class NewsLandingComponent implements OnInit {
   public articles;
 
   async ngOnInit() {
-    this.articles = await this.newsService.getFeed();
+    await this.newsService.getLastNews();
+
+    this.newsService.getFeed().then(res => {
+      this.articles = res;
+    });
     // this.paisArticles = await this.newsService.getArticles(API.paisEndPoint);
   }
 }
