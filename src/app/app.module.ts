@@ -1,4 +1,3 @@
-import { MaterialModule } from "./global/material.module";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
@@ -6,17 +5,16 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { NewsModule } from "./news/news.module";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { SharedModule } from "./shared/shared.module";
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    MaterialModule,
+    SharedModule,
     AppRoutingModule,
     HttpClientModule,
-    NewsModule,
-    BrowserAnimationsModule
+    NewsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

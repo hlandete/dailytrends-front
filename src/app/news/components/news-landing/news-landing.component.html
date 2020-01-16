@@ -1,8 +1,6 @@
-<div class="newsLanding">
-  <h1>DailyTrends</h1>
-
+<mat-grid-list cols="4" rowHeight="150px">
   <form [formGroup]="articleForm">
-    <input matInput placeholder="Name" formControlName="url" />
+    <input matInput placeholder="Url Articulo" formControlName="url" />
 
     <button
       type="submit"
@@ -13,11 +11,8 @@
       Añadir Noticia
     </button>
   </form>
-
-  <mat-grid-list cols="4" rowHeight="150px">
-    <app-dailytrend-article
-      *ngFor="let article of articles"
-      [article]="article"
-    ></app-dailytrend-article>
-  </mat-grid-list>
-</div>
+  <app-dailytrend-article
+    *ngFor="let article of timeLineArticles"
+    [article]="article"
+  ></app-dailytrend-article>
+</mat-grid-list>

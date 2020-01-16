@@ -1,0 +1,12 @@
+.header-image {
+  width: 50px;
+  background-position: center;
+  background-size: cover;
+  &.elmundo {
+    background-image: url("/assets/logos/logo_elmundo.png");
+  }
+
+  &.elpais {
+    background-image: url("/assets/logos/logo_elpais.png");
+  }
+}

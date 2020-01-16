@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 
-import * as API from "../../global/endpoints";
+import * as API from "../../shared/endpoints";
 
 @Injectable({
   providedIn: "root"
@@ -22,9 +22,13 @@ export class NewsService {
   }
 
   public postSingleNew(url) {
-    return this.http.post(API.endpoints.postNew, { url }).toPromise();
-  }
-  /*public getArticles(endpoint) {
+    return this.http.post(API.endpoints.postNew, { url });
+    /*public getArticles(endpoint) {
     return this.http.get(endpoint).toPromise();
   }*/
+  }
+
+  public updateArticle(id, body) {
+    return this.http.patch(API.endpoints.postNew + "/" + id, { body });
+  }
 }

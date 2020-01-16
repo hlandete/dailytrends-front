@@ -1,17 +1,19 @@
 import { Component, OnInit } from "@angular/core";
 import { NewsService } from "../../service/news.service";
 import { ActivatedRoute } from "@angular/router";
-import { Article } from "src/app/global/article.interface";
+import { Article } from "src/app/shared/article.interface";
+import { ToastrService } from "ngx-toastr";
 
 @Component({
   selector: "app-new-detail",
   templateUrl: "./new-detail.component.html",
-  styles: []
+  styleUrls: ["./new-detail.component.scss"]
 })
 export class NewDetailComponent implements OnInit {
   constructor(
     private newsService: NewsService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private readonly toastService: ToastrService
   ) {}
 
   public id: string;
@@ -27,4 +29,22 @@ export class NewDetailComponent implements OnInit {
       this.article = article as Article;
     });
   }
+
+  public enableEditMode() {
+    this.editMode = true;
+  }
+
+  public updateArticle(id, body) {
+    this.newsService.updateArticle(id, body).subscribe(
+      article => {
+        this.toastService.success("Articulo actualizado con exito");
+      },
+      error => {
+        this.toastService.error(error.error.message);
+      }
+    );
+    this.editMode = false;
+  }
+
+  public deleteArticle(id) {}
 }

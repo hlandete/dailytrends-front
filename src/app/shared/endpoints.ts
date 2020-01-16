@@ -3,6 +3,7 @@ export const endpoints = {
   paisEndPoint: "api/elpais",
   getNew: "api/articles",
   postNew: "api/articles",
+  updateNew: "api/article",
   feed: "api/articles/feed",
   lastNews: "api/articles/today"
 };
