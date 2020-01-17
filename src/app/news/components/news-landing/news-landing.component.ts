@@ -21,12 +21,14 @@ export class NewsLandingComponent implements OnInit {
   public timeLineArticles: Article[];
 
   async ngOnInit() {
-    await this.newsService.getLastNews();
+    await this.newsService.getLastNews().toPromise();
 
-    this.newsService.getFeed().then(res => {
-      this.articles = res as Article[];
-      this.timeLineArticles = this.articles.slice().reverse();
-    });
+    this.newsService.getFeed().subscribe(
+      res => {
+        this.articles = (res as Article[]).slice().reverse();
+      },
+      error => {}
+    );
     // this.paisArticles = await this.newsService.getArticles(API.paisEndPoint);
   }
 
@@ -34,8 +36,7 @@ export class NewsLandingComponent implements OnInit {
     const url = this.articleForm.get("url").value;
     this.newsService.postSingleNew(url).subscribe(
       article => {
-        this.articles.push(article as Article);
-        this.timeLineArticles.slice().reverse();
+        this.articles.unshift(article as Article);
         this.toastService.success("Articulo añadido con exito");
       },
       error => {

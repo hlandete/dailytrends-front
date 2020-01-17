@@ -15,12 +15,6 @@ import { SharedModule } from "../shared/shared.module";
     NewDetailComponent
   ],
   providers: [NewsService],
-  imports: [
-    CommonModule,
-    MaterialModule,
-    SharedModule,
-    FormsModule,
-    ReactiveFormsModule
-  ]
+  imports: [CommonModule, SharedModule, FormsModule, ReactiveFormsModule]
 })
 export class NewsModule {}

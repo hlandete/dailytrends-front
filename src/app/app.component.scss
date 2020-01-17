@@ -1,5 +1,5 @@
 mat-drawer {
-  min-width: 250px;
+  width: 250px;
 }
 mat-drawer-content {
   margin-left: 250px;
@@ -9,4 +9,17 @@ mat-drawer-content {
   height: 100% !important;
 }
 
+.home-icon {
+  cursor: pointer;
+}
+
 /*Crear media query para sideNavBar*/
+@media (max-width: 1000px) {
+  mat-drawer {
+    width: 0;
+  }
+
+  mat-drawer-content {
+    margin-left: 0;
+  }
+}

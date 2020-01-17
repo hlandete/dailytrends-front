@@ -16,7 +16,8 @@ const routes: Routes = [
   {
     path: "news-detail/:id",
     component: NewDetailComponent
-  }
+  },
+  { path: "**", redirectTo: "/news" }
 ];
 
 @NgModule({

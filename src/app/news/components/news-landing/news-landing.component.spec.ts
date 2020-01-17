@@ -1,16 +1,17 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { NewsLandingComponent } from './news-landing.component';
+import { NewsLandingComponent } from "./news-landing.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
-describe('NewsLandingComponent', () => {
+describe("NewsLandingComponent", () => {
   let component: NewsLandingComponent;
   let fixture: ComponentFixture<NewsLandingComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NewsLandingComponent ]
-    })
-    .compileComponents();
+      declarations: [NewsLandingComponent],
+      imports: [BrowserAnimationsModule]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +20,7 @@ describe('NewsLandingComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

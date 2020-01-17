@@ -8,7 +8,8 @@ mat-card {
 }
 
 .header-image {
-  width: 50px;
+  width: 70px;
+  height: 70px;
   background-position: center;
   background-size: cover;
   &.elmundo {
@@ -18,4 +19,9 @@ mat-card {
   &.elpais {
     background-image: url("/assets/logos/logo_elpais.png");
   }
+}
+
+mat-card-title,
+mat-card-subtitle {
+  margin-left: 2%;
 }

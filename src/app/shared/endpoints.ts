@@ -1,9 +1,4 @@
 export const endpoints = {
-  mundoEndPoint: "api/elmundo",
-  paisEndPoint: "api/elpais",
-  getNew: "api/articles",
-  postNew: "api/articles",
-  updateNew: "api/article",
-  feed: "api/articles/feed",
+  articles: "api/articles",
   lastNews: "api/articles/today"
 };
