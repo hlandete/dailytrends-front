@@ -1,0 +1,18 @@
+<mat-grid-list cols="4" rowHeight="150px">
+  <form [formGroup]="articleForm">
+    <input matInput placeholder="Url Articulo" formControlName="url" />
+
+    <button
+      type="submit"
+      [disabled]="articleForm.invalid"
+      (click)="addArticle()"
+      mat-button
+    >
+      Añadir Noticia
+    </button>
+  </form>
+  <app-dailytrend-article
+    *ngFor="let article of articles"
+    [article]="article"
+  ></app-dailytrend-article>
+</mat-grid-list>

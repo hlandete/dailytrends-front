@@ -1,0 +1,28 @@
+.header-image {
+  width: 50px;
+  background-position: center;
+  background-size: cover;
+  &.elmundo {
+    background-image: url("/assets/logos/logo_elmundo.png");
+  }
+
+  &.elpais {
+    background-image: url("/assets/logos/logo_elpais.png");
+  }
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.mat-card-header-text,
+input {
+  width: 100% !important;
+}
+textarea {
+  width: 100%;
+  min-height: 100px;
+}

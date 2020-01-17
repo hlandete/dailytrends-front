@@ -1,0 +1,27 @@
+mat-card {
+  cursor: pointer;
+  margin: 2%;
+
+  &:hover {
+    box-shadow: 0 0 30px rgba(33, 33, 33, 1);
+  }
+}
+
+.header-image {
+  width: 70px;
+  height: 70px;
+  background-position: center;
+  background-size: cover;
+  &.elmundo {
+    background-image: url("/assets/logos/logo_elmundo.png");
+  }
+
+  &.elpais {
+    background-image: url("/assets/logos/logo_elpais.png");
+  }
+}
+
+mat-card-title,
+mat-card-subtitle {
+  margin-left: 2%;
+}
