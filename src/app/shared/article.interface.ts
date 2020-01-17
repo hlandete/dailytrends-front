@@ -2,10 +2,8 @@ export interface Article {
   _id: string;
   title: string;
   body: string;
-  source: {
-    url: string;
-    name: string;
-  };
+  source: string;
+  author: string;
   image: string;
   publisher: string;
 }

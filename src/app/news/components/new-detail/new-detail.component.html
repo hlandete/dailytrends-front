@@ -1,8 +1,8 @@
 <mat-card *ngIf="!editMode" class="article">
   <mat-card-header>
-    <div mat-card-avatar class="header-image {{ article.source.name }}"></div>
+    <div mat-card-avatar class="header-image {{ article.publisher }}"></div>
     <mat-card-title>{{ article.title }}</mat-card-title>
-    <mat-card-subtitle>Autor: {{ article.publisher }}</mat-card-subtitle>
+    <mat-card-subtitle>Autor: {{ article.author }}</mat-card-subtitle>
   </mat-card-header>
   <img id="article_image" mat-card-image src="{{ article.image }}" />
   <mat-card-content>
@@ -18,11 +18,11 @@
 <mat-card *ngIf="editMode" class="article">
   <form [formGroup]="articleForm">
     <mat-card-header>
-      <div mat-card-avatar class="header-image {{ article.source.name }}"></div>
+      <div mat-card-avatar class="header-image {{ article.publisher }}"></div>
       <mat-card-title>
         <input matInput formControlName="title" />
       </mat-card-title>
-      <mat-card-subtitle>Autor: {{ article.publisher }}</mat-card-subtitle>
+      <mat-card-subtitle>Autor: {{ article.author }}</mat-card-subtitle>
     </mat-card-header>
     <img id="article_image" mat-card-image src="{{ article.image }}" />
     <mat-card-content>

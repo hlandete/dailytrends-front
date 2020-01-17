@@ -12,10 +12,8 @@ export class DailytrendArticleComponent implements OnInit {
   public id: string;
   public title: string;
   public body: string;
-  public source: {
-    url: string;
-    name: string;
-  };
+  public source: string;
+  public author: string;
   public image: string;
   public publisher: string;
 
@@ -28,6 +26,7 @@ export class DailytrendArticleComponent implements OnInit {
     this.source = this.article.source;
     this.image = this.article.image;
     this.publisher = this.article.publisher;
+    this.author = this.article.author;
   }
 
   navigate() {

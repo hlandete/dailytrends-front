@@ -29,6 +29,7 @@ export class NewsLandingComponent implements OnInit {
       },
       error => {}
     );
+
     // this.paisArticles = await this.newsService.getArticles(API.paisEndPoint);
   }
 
