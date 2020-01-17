@@ -1,27 +1,39 @@
-# DailytrendsFront
+## Description
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
+Prueba tecnica para Avantio
 
-## Development server
+## Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```bash
+$ npm install
+```
 
-## Code scaffolding
+## Running the app
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Importante no hacer ng serve pues el front tiene un proxy
 
-## Build
+```bash
+$ npm run start
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Explanation
 
-## Running unit tests
+El framework empleado es Angular
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Para la realización del front se han empleado 3 modulos.
 
-## Running end-to-end tests
+- app.modue -> Carga la aplicación
+- shared.module -> Modulo para la carga de elemetnos compartidos entre modulos
+- news.module -> El principal modulo de la aplicación
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+La aplicacion consta de 3 componentes principales
 
-## Further help
+- news-landing.component -> Principal componente donde se carga el feed del usuario
+- dailytrend-article.component -> Estructura de cada articulo dentro del feed
+- new-detail.component -> Vista de detalle de cada noticia donde podremos editarla o borrarla
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Errors
+
+Por problemas con el scrapper, debido a que la estructura de las noticias no es siempre igual, en ocasiones no consigue extraer algunos elementos de las noticias como Autor, body o imagen y el diario "El Mundo" el texto no llega codificado en UTF-8 
+
+
