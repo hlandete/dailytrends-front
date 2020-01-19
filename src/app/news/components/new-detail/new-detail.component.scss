@@ -1,7 +1,8 @@
 .header-image {
-  width: 50px;
+  width: 80px;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   &.elmundo {
     background-image: url("/assets/logos/logo_elmundo.png");
   }
@@ -11,11 +12,14 @@
   }
 }
 
-img {
+mat-card,
+mat-card-content,
+img,
+textarea {
   display: block;
-  margin-left: auto;
+  margin: 2% auto 2% auto;
   margin-right: auto;
-  width: 50%;
+  width: 80%;
 }
 
 .mat-card-header-text,

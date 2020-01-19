@@ -3,7 +3,6 @@ import { NewsLandingComponent } from "./components/news-landing/news-landing.com
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { DailytrendArticleComponent } from "./components/dailytrend-article/dailytrend-article.component";
-import { MaterialModule } from "../shared/material/material.module";
 import { NewDetailComponent } from "./components/new-detail/new-detail.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { SharedModule } from "../shared/shared.module";

@@ -8,10 +8,12 @@ mat-card {
 }
 
 .header-image {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  float: left;
   &.elmundo {
     background-image: url("/assets/logos/logo_elmundo.png");
   }
